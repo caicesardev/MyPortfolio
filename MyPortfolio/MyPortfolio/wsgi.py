@@ -8,14 +8,10 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
 import os
-from dotenv import load_dotenv
 from pathlib import Path
 
 from django.core.wsgi import get_wsgi_application
 
-project_folder = Path(__file__).absolute(
-).parent.parent.parent  # adjust as appropriate
-load_dotenv(os.path.join(project_folder, '.env'))
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MyPortfolio.settings')
 
