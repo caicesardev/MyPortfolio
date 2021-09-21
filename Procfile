@@ -1,1 +1,1 @@
-web: gunicorn MyPortfolio.wsgi.application --log-file -
+web: python manage.py run_gunicorn
