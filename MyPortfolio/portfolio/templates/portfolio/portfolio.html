@@ -1,0 +1,940 @@
+{% extends 'portfolio/main.html' %}
+{% load static %}
+{% block title %} Caio Gomes | Portafolio {% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid d-flex justify-content-center align-items-center flex-column">
+
+    <!-- Python -->
+
+    <div class="container-fluid bg-dark-gradient-2 shadow" style="max-width: 99%;">
+
+        <div class="row m-2">
+
+            <div class="d-flex flex-column align-items-center mt-5">
+
+                <img class="img-fluid" src="{% static 'images/python.png' %}" alt="python-logo"
+                    style="max-width: 300px; max-height: 350px;">
+
+                <h1 class="text-white mt-2" style="font-size: 3.3rem;">Python</h1>
+
+            </div>
+
+            <nav class="nav nav-pills nav-justified d-flex flex-column flex-md-row mt-2">
+
+                <a class="nav-link active" id="django-tab-list" data-bs-toggle="list" href="#django-tab" role="tab"
+                    aria-controls="list-home">Django</a>
+                <a class="nav-link" id="pyqt-tab-list" data-bs-toggle="list" href="#pyqt-tab" role="tab"
+                    aria-controls="list-profile">PyQt5/PySide6</a>
+
+            </nav>
+
+        </div>
+
+        <div class="row m-2">
+
+            <div class="col">
+
+                <div class="tab-content mt-5" id="nav-tabContent">
+
+                    <!-- Django -->
+                    <div class="tab-pane show active text-white" id="django-tab" role="tabpanel"
+                        aria-labelledby="django-tab-list">
+
+                        <!-- Image -->
+
+                        <div class="d-flex justify-content-center">
+
+                            <img class="img-fluid" src="{% static 'images/django.png' %}" alt="django-image"
+                                style="max-width: 300px; max-height: 300px;">
+
+                        </div>
+
+                        <!-- Image -->
+
+                        <!-- Title -->
+
+                        <h2 class="mt-3">DJANGO</h2>
+
+                        <!-- Title -->
+
+                        <hr class="style-seven">
+
+                        <p>Django es el framework de Python para desarrollo web más completo y popular. Lo he usado para
+                            hacer esta página web y otros proyectos más complejos como por ejemplo un ecommerce.</p>
+
+                        <div class="container-fluid mt-4">
+
+                            <ul class="list-group">
+
+                                <a href="#moonlight"
+                                    class="list-group-item list-group-item-action list-group-item-dark">1.
+                                    Moonlight</a>
+
+                                <a href="#my-portfolio"
+                                    class="list-group-item list-group-item-action list-group-item-secondary">2.
+                                    Mi Portafolio</a>
+
+                            </ul>
+
+                            <hr>
+
+                        </div>
+
+                        <!-- Moonlight -->
+
+                        <h2 class="mt-5 mb-3" id="moonlight">1. Moonlight | Ecommerce</h2>
+
+                        <p class="text-muted">Moonlight es un ecommerce en el que estoy trabajando. Su fecha
+                            de
+                            lanzamiento aún no está prevista ya que actualmente estudio un Ciclo Formativo de
+                            Informática y no puedo dedicar mucho tiempo al proyecto.</p>
+
+                        <p class="text-muted">El proyecto se compondrá de los siguientes elementos:</p>
+
+                        <div class="container mt-5">
+
+                            <ul class="list-group">
+
+                                <a href="#tienda" class="list-group-item list-group-item-action list-group-item-dark">1.
+                                    Tienda</a>
+                                <a href="#cart"
+                                    class="list-group-item list-group-item-action list-group-item-secondary">2. Carrito
+                                    de la compra</a>
+                                <a href="#checkout"
+                                    class="list-group-item list-group-item-action list-group-item-dark">3. Página de
+                                    pagamiento</a>
+                                <a href="#settings"
+                                    class="list-group-item list-group-item-action list-group-item-secondary">4. Página
+                                    de
+                                    configuración</a>
+                                <a href="#profile"
+                                    class="list-group-item list-group-item-action list-group-item-dark">5. Perfil del
+                                    usuario</a>
+                                <a href="#login"
+                                    class="list-group-item list-group-item-action list-group-item-secondary">6. Página
+                                    de inicio de sesión</a>
+                                <a href="#register"
+                                    class="list-group-item list-group-item-action list-group-item-dark rounded-bottom">7.
+                                    Página de
+                                    registro</a>
+
+                                <hr class="style-seven mt-5">
+
+                            </ul>
+
+                        </div>
+
+                        <!-- Store -->
+
+                        <div class="container d-flex flex-column flex-lg-row justify-content-center mt-4" id="tienda">
+
+                            <div class="container">
+
+                                <img class="img-fluid rounded" src="{% static 'images/ecommerce-store.jpg' %}"
+                                    alt="ecommerce-store">
+
+                            </div>
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Tienda</h2>
+
+                                <hr class="style-seven">
+
+                                <p>La tienda es donde se mostrarán todos los productos registrados en la base de datos.
+                                    Cada producto tiene un precio y se puede configurar si es digital o físico.</p>
+
+                                <p>La tienda está sujeta a cambios y en un futuro se podrá filtrar productos basándose
+                                    en la categoría e incluso se avisará al usuario si algún producto está en oferta.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Store -->
+
+
+                        <!-- Cart -->
+
+                        <div class="container mt-lg-5 mb-lg-5 d-flex flex-column flex-lg-row justify-content-center mt-4"
+                            id="cart">
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Carrito de la compra</h2>
+
+                                <hr class="style-seven">
+
+                                <p>En el carrito de la compra se mostrarán todos los productos que el usuario haya
+                                    añadido.</p>
+
+                                <p>El usuario podrá añadir y quitar productos libremente y la página le mostrará el
+                                    precio total de su compra así como el número total de productos seleccionados.</p>
+
+                            </div>
+
+                            <div class="container">
+
+                                <img class="img-fluid rounded" src="{% static 'images/ecommerce-cart.jpg' %}"
+                                    alt="ecommerce-cart">
+
+                            </div>
+
+                        </div>
+
+                        <!-- Cart -->
+
+                        <!-- Checkout -->
+
+                        <div class="container d-flex flex-column-reverse flex-lg-row justify-content-center mt-4"
+                            id="checkout">
+
+                            <div class="container">
+
+                                <img class="img-fluid rounded" src="{% static 'images/ecommerce-checkout.png' %}"
+                                    alt="ecommerce-checkout">
+
+                            </div>
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Pagamiento</h2>
+
+                                <hr class="style-seven">
+
+                                <p>La página de pagamiento es donde el usuario verá sus productos y podrá proceder a
+                                    pagar.</p>
+
+                                <p>El usuario tendrá que rellenar la información de envío y al continuar se le mostrará
+                                    las opciones de pago. En un futuro se añadirán nuevas opciones de pago.</p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Checkout -->
+
+                        <!-- Settings -->
+
+                        <div class="container mt-lg-5 mb-lg-5 d-flex flex-column flex-lg-row justify-content-center mt-4"
+                            id="settings">
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Configuración</h2>
+
+                                <hr class="style-seven">
+
+                                <p>En la página de configuración el usuario podrá configurar la información de su perfil
+                                    y parámetros como por ejemplo el tema de colores, las notificaciones y opciones de
+                                    privacidad.</p>
+
+                                <p>Aún estoy desarrollando esta página y estoy creando un tema oscuro para la página que
+                                    se podrá configurar desde aquí. El tema oscuro solo estará disponible para usuarios
+                                    registrados.</p>
+
+                            </div>
+
+                            <div class="container">
+
+                                <div id="carouselExampleIndicators" class="carousel carousel-dark slide"
+                                    data-bs-ride="carousel">
+
+                                    <div class="carousel-indicators">
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="0" class="active" aria-current="true"
+                                            aria-label="Slide 1"></button>
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                                    </div>
+
+                                    <div class="carousel-inner rounded">
+
+                                        <div class="carousel-item active">
+
+                                            <img src="{% static 'images/ecommerce-profile-settings.png' %}"
+                                                class="d-block w-100 img-fluid" alt="ecommerce-settings">
+
+                                        </div>
+
+                                        <div class=" carousel-item">
+
+                                            <img src="{% static 'images/ecommerce-theme.png' %}"
+                                                class="d-block w-100 img-fluid" alt="ecommerce-theme">
+
+                                        </div>
+
+                                        <div class="carousel-item">
+
+                                            <img src="{% static 'images/ecommerce-notifications.png' %}"
+                                                class="d-block w-100 img-fluid" alt="ecommerce-notifications">
+
+                                        </div>
+
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                                        <span class="visually-hidden">Anterior</span>
+
+                                    </button>
+
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                                        <span class="visually-hidden">Siguiente</span>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Settings -->
+
+                        <!-- User profile -->
+
+                        <div class="container d-flex flex-column-reverse flex-lg-row justify-content-center mt-4"
+                            id="profile">
+
+                            <div class="container">
+
+                                <img class="img-fluid rounded" src="{% static 'images/under-dev.jpg' %}"
+                                    alt="ecommerce-user-profile">
+
+                            </div>
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Perfil del Usuario</h2>
+
+                                <hr class="style-seven">
+
+                                <p>Esta página mostrará toda la información del usuario así como un historial de pedidos
+                                    en forma de informe.</p>
+
+                                <p>Todavía está en desarrollo.</p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- User profile -->
+
+                        <!-- Login -->
+
+                        <div class="container mt-lg-5 mb-lg-5 d-flex flex-column flex-lg-row justify-content-center mt-4"
+                            id="login">
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Inicio de Sesión</h2>
+
+                                <hr class="style-seven">
+
+                                <p>La página de inicio de sesión permitirá a los usuarios registrados en la página web
+                                    iniciar sesión.</p>
+
+                                <p>En un futuro se añadirá una opción para poder recuperar contraseñas en cas de que el
+                                    usuario se haya olvidado.</p>
+
+                            </div>
+
+                            <div class="container">
+
+                                <img class="img-fluid rounded" src="{% static 'images/ecommerce-login.png' %}"
+                                    alt="ecommerce-login">
+
+                            </div>
+
+                        </div>
+
+                        <!-- Login -->
+
+                        <!-- Register -->
+
+                        <div class="container d-flex flex-column-reverse flex-lg-row justify-content-center mt-4"
+                            id="register">
+
+                            <div class="container">
+
+                                <img class="img-fluid rounded" src="{% static 'images/ecommerce-register.png' %}"
+                                    alt="ecommerce-register">
+
+                            </div>
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Registro</h2>
+
+                                <hr class="style-seven">
+
+                                <p>La página de registro permitirá a nuevos usuarios poder registrarse a la página web.
+                                </p>
+
+                                <p>Registrarse automáticamente te permitirá acceder al perfil de usuario y a la página
+                                    de configuración. Además de futuros beneficios como el autocompletado en la página
+                                    de pagamiento.</p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Register -->
+
+                        <!-- My Portfolio -->
+
+                        <h2 class="mt-5 mb-3" id="my-portfolio">2. Mi portafolio</h2>
+
+                        <p class="text-muted">Esta página web ha sido creada con Django para que sirva como mi
+                            portafolio personal. Está sujeta a cambios visuales y de funcionalidades.</p>
+
+                        <p class="text-muted">El código fuente de la página está disponible en mi repositorio personal
+                            de <a href="https://www.github.com/caicesardev/MyPortfolio" target="_blank">Github</a>.</p>
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-center">
+
+                            <a href="{% url 'home' %}" class="btn btn-outline-primary mb-2 ms-1 me-1">Home</a>
+                            <a href="{% url 'portfolio' %}"
+                                class="btn btn-outline-primary mb-2 ms-1 me-1">Portafolio</a>
+                            <a href="{% url 'blog' %}" class="btn btn-outline-primary mb-2 ms-1 me-1">Blog</a>
+                            <a href="{% url 'contact' %}" class="btn btn-outline-primary mb-2 ms-1 me-1">Contacto</a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Django -->
+
+
+                    <!-- PyQt5/PySide6 -->
+
+                    <div class="tab-pane text-white" id="pyqt-tab" role="tabpanel" aria-labelledby="pyqt-tab-list">
+
+                        <!-- Image -->
+
+                        <div class="d-flex justify-content-center">
+
+                            <img class="img-fluid" src="{% static 'images/pyqt.png' %}" alt="django-image"
+                                style="max-width: 300px; max-height: 300px;">
+
+                        </div>
+
+                        <!-- Image -->
+
+                        <!-- Title -->
+
+                        <h2 class="mt-4">PyQt5/PySide6</h2>
+
+                        <!-- Title -->
+
+                        <hr class="style-seven">
+
+                        <p>
+                            PyQt5 y PySide6 son los mejores Frameworks de Python para el desarrollo de aplicaciones de
+                            escritorio. Tengo experiéncia con los dos Frameworks y he desarrollado proyectos con ellos.
+                        </p>
+
+                        <div class="container-fluid mt-4">
+
+                            <ul class="list-group">
+
+                                <a href="#pynotes"
+                                    class="list-group-item list-group-item-action list-group-item-dark">1.
+                                    PyNotes</a>
+
+                                <a href="#desktop-app"
+                                    class="list-group-item list-group-item-action list-group-item-dark">2.
+                                    Aplicación de escritorio</a>
+
+                            </ul>
+
+                            <hr>
+
+                        </div>
+
+                        <!-- PyNotes -->
+
+                        <h2 class="mt-5 mb-3" id="pynotes">1. PyNotes | PySide6</h2>
+
+                        <p class="text-muted">PyNotes es un editor de texto el cual todavía estoy desarrollando. Este
+                            proyecto utiliza PySide6 ya que ya tengo experiéncia con PyQt5 y quería un nuevo desafío.
+                            PySide6 ofrece una licencia más permisiva por lo tanto se pueden hacer proyectos comerciales
+                            sin comprar una licencia.
+                        </p>
+
+                        <!-- PyNotes -->
+
+                        <!-- Project -->
+
+                        <div class="container d-flex flex-column flex-lg-row justify-content-center mt-4">
+
+                            <div class="container" style="max-width: 800px;">
+
+                                <div id="carouselExampleIndicators3" class="carousel carousel-dark slide"
+                                    data-bs-ride="carousel">
+
+                                    <div class="carousel-indicators">
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators3"
+                                            data-bs-slide-to="0" class="active" aria-current="true"
+                                            aria-label="Slide 1"></button>
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators3"
+                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators3"
+                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                                    </div>
+
+                                    <div class="carousel-inner rounded">
+
+                                        <div class="carousel-item active">
+
+                                            <img src="{% static 'images/pynotes.png' %}" class="d-block w-100 img-fluid"
+                                                alt="ecommerce-settings">
+
+                                        </div>
+
+                                        <div class="carousel-item">
+
+                                            <img src="{% static 'images/pynotes-empty.png' %}"
+                                                class="d-block w-100 img-fluid" alt="ecommerce-theme">
+
+                                        </div>
+
+                                        <div class="carousel-item">
+
+                                            <img src="{% static 'images/pynotes-about.png' %}"
+                                                class="d-block w-100 img-fluid" alt="ecommerce-notifications">
+
+                                        </div>
+
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                                        <span class="visually-hidden">Anterior</span>
+
+                                    </button>
+
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                                        <span class="visually-hidden">Siguiente</span>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="container d-flex flex-column flex-lg-row justify-content-center mt-lg-5">
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Proyecto</h2>
+
+                                <hr class="style-seven">
+
+                                <p>PyNotes es un simple editor de texto desarrollado con PySide6 con fines de
+                                    aprendizaje.</p>
+
+                                <p>PyNotes contará con las funcionalidades básicas de un editor de texto pero además
+                                    contará con funcionalidades extras como crear tablas, imprimir el texto, soporte
+                                    para Markdown, ajustes de texto y mucho más.
+                                </p>
+
+                            </div>
+
+                            <div class="container">
+
+                                <img class="img-fluid rounded" src="{% static 'images/pynotes-menu.png' %}"
+                                    alt="pynotes-menu">
+
+                            </div>
+
+                        </div>
+
+                        <h2 class="mt-5 mb-3" id="desktop-app">2. Aplicación de escritorio</h2>
+
+                        <div class="container d-flex flex-column flex-lg-row justify-content-center mt-lg-5">
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Aplicación</h2>
+
+                                <hr class="style-seven">
+
+                                <p>Desarrollé una aplicación de escritorio para <a href="https://www.pivsistemes.com"
+                                        target="_blank">Grup Piv de Sistemes</a> durante mi período
+                                    de prácticas.</p>
+
+                                <p>
+                                    Esta aplicación contaba con una interfaz gráfica creada con PyQT5 y trabajaba
+                                    conjuntamente con una base de datos MySQL.
+                                </p>
+
+                            </div>
+
+                            <div class="container d-flex align-items-center justify-content-center">
+
+                                <a href="https://www.pivsistemes.com" target="_blank">
+
+                                    <img class="img-fluid rounded" src="{% static 'images/piv.png' %}"
+                                        alt="pynotes-menu">
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Project -->
+
+                </div>
+
+                <!-- PyQt5/PySide6 -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Python -->
+
+    <!-- HTML -->
+
+    <div class="container-fluid bg-dark-gradient-2 shadow" style="max-width: 99%;">
+
+        <div class="row m-2">
+
+            <div class="d-flex flex-column align-items-center mt-5">
+
+                <img class="img-fluid rounded" src="{% static 'images/HTML5.png' %}" alt="python-logo"
+                    style="max-width: 300px; max-height: 350px;">
+
+                <h1 class="text-white text-center mt-2" style="font-size: 3.3rem;"> HTML5 & CSS3</h1>
+
+            </div>
+
+            <nav class="nav nav-pills nav-justified d-flex flex-column flex-md-row">
+
+                <a class="nav-link active" id="list-settings-list" data-bs-toggle="list" href="#list-settings"
+                    role="tab" aria-controls="list-settings">HTML5/CSS3</a>
+
+            </nav>
+
+        </div>
+
+        <div class="row m-2">
+
+            <div class="col">
+
+                <div class="tab-content mt-5" id="nav-tabContent">
+
+                    <!-- HTML5/CSS -->
+
+                    <div class="tab-pane show active text-white" id="list-settings" role="tabpanel"
+                        aria-labelledby="list-settings-list">
+
+                        <!-- Title -->
+
+                        <h2 class="mt-3">HTML5 & CSS3</h2>
+
+                        <!-- Title -->
+
+                        <hr class="style-seven">
+
+                        <p>Hice el diseño de una página web con HTML5 y CSS3 nativos sin usar ningún framework. Lo hice
+                            así para poder aprender más sobre estas tecnologías y porque era un desafío.</p>
+
+                        <p>El contenido de la página web fue escrito en Catalán.</p>
+
+                        <p>Gracias a ese proyecto pude aprender muy a fondo como funcionan HTML5 y CSS3.</p>
+
+                        <div class="container-fluid mt-4">
+
+                            <ul class="list-group">
+
+                                <a href="#business"
+                                    class="list-group-item list-group-item-action list-group-item-dark">1.
+                                    Naminum | Empresa de Informática</a>
+
+                            </ul>
+
+                            <hr>
+
+                        </div>
+
+
+                        <div class="container d-flex justify-content-center align-items-center">
+
+                            <img class="img-fluid container rounded-pill" src="{% static 'images/naminum.png' %}"
+                                alt="naminum-logo" style="max-width: 600px;">
+
+                        </div>
+
+                        <h2 class="mt-5" id="business">1. Naminum | Empresa de Informática</h2>
+
+                        <p class="text-muted">Este proyecto educacional consistía en hacer una página web para nuestra
+                            empresa y explicar los servicios, misión, visión y valores de nuestra empresa.</p>
+
+                        <div class="container mt-5">
+
+                            <ul class="list-group">
+
+                                <a href="#inicio" class="list-group-item list-group-item-action list-group-item-dark">1.
+                                    Inicio</a>
+                                <a href="#servicios"
+                                    class="list-group-item list-group-item-action list-group-item-secondary">2.
+                                    Servicios</a>
+                                <a href="#nosotros"
+                                    class="list-group-item list-group-item-action list-group-item-dark">3.
+                                    Sobre
+                                    nosotros</a>
+                                <a href="#contacto"
+                                    class="list-group-item list-group-item-action list-group-item-secondary">4.
+                                    Contacto</a>
+
+                                <hr class="style-seven mt-5">
+
+                            </ul>
+
+                        </div>
+
+                        <!-- Inicio -->
+
+                        <div class="container d-flex flex-column flex-lg-row justify-content-center mt-4" id="inicio">
+
+                            <div class="container">
+
+                                <img class="img-fluid rounded" src="{% static 'images/naminum-inicio.png' %}"
+                                    alt="naminum-inicio">
+
+                            </div>
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Inicio</h2>
+
+                                <hr class="style-seven">
+
+                                <p>En la página de inicio se encontraba el logo de la empresa e información
+                                    general sobre los servicios y acerca de nosotros.</p>
+
+                                <p>Como fue la primera página web que hice, desconocía de como hacerla "responsive" y
+                                    podrás notar que la barra de navegación no se adapta al espacio disponible</p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Inicio -->
+
+
+                        <!-- Serivicios -->
+
+                        <div class="container mt-lg-5 mb-lg-5 d-flex flex-column flex-lg-row justify-content-center mt-4"
+                            id="servicios">
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Servicios</h2>
+
+                                <hr class="style-seven">
+
+                                <p>En servicios se encontra información general sobre los servicios ofrecidos por
+                                    la empresa.</p>
+
+                                <p>Cada servicio tenía una página dedicada a explicar en detalle de qué se trataba.</p>
+
+                            </div>
+
+                            <div class="container">
+
+                                <div id="carouselExampleIndicators2" class="carousel carousel-dark slide"
+                                    data-bs-ride="carousel">
+
+                                    <div class="carousel-indicators">
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators2"
+                                            data-bs-slide-to="0" class="active" aria-current="true"
+                                            aria-label="Slide 1"></button>
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators2"
+                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators2"
+                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators2"
+                                            data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+                                    </div>
+
+                                    <div class="carousel-inner rounded">
+
+                                        <div class="carousel-item active">
+
+                                            <img src="{% static 'images/naminum-servicios.png' %}"
+                                                class="d-block w-100 img-fluid" alt="naminum-servicios">
+
+                                        </div>
+
+                                        <div class="carousel-item">
+
+                                            <img src="{% static 'images/naminum-web.jpg' %}"
+                                                class="d-block w-100 img-fluid" alt="naminum-web">
+
+                                        </div>
+
+                                        <div class="carousel-item">
+
+                                            <img src="{% static 'images/naminum-hardware.png' %}"
+                                                class="d-block w-100 img-fluid" alt="naminum-hardware">
+
+                                        </div>
+
+                                        <div class="carousel-item">
+
+                                            <img src="{% static 'images/naminum-it.png' %}"
+                                                class="d-block w-100 img-fluid" alt="naminum-it">
+
+                                        </div>
+
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                                        <span class="visually-hidden">Anterior</span>
+
+                                    </button>
+
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                                        <span class="visually-hidden">Siguiente</span>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Servicios -->
+
+                        <!-- Sobre Nosotros -->
+
+                        <div class="container d-flex flex-column-reverse flex-lg-row justify-content-center mt-4"
+                            id="nosotros">
+
+                            <div class="container">
+
+                                <img class="img-fluid rounded" src="{% static 'images/naminum-sobre-nosotros.png' %}"
+                                    alt="naminum-sobre-nosotros">
+
+                            </div>
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Sobre Nosotros</h2>
+
+                                <hr class="style-seven">
+
+                                <p>El apartado de Sobre Nosotros explicaba quienes somos y describía brevemente el
+                                    objetivo del proyecto.</p>
+
+                                <p>Yo fui el diseñador de la página web y mi compañero me ayudó a hacer el plan de
+                                    empresa.</p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Sobre Nosotros -->
+
+                        <!-- Contacto -->
+
+                        <div class="container mt-lg-5 mb-lg-5 d-flex flex-column flex-lg-row justify-content-center mt-4"
+                            id="contacto">
+
+                            <div class="container">
+
+                                <h2 class="mt-3 mt-lg-0">Contacto</h2>
+
+                                <hr class="style-seven">
+
+                                <p>En este apartado simulabamos un formulario de contacto para que cualquier usuario
+                                    pudiese ponerse en contacto con la empresa.</p>
+
+                                <p>Cabe decir que no es funcional, solo hice el diseño no la lógica y
+                                    por lo tanto es meramente decorativo.</p>
+
+                            </div>
+
+                            <div class="container">
+
+                                <img class="img-fluid rounded" src="{% static 'images/naminum-contacto.png' %}"
+                                    alt="naminum-contacto">
+
+                            </div>
+
+                        </div>
+
+                        <!-- Contacto -->
+
+
+                    </div>
+
+                </div>
+
+                <!-- HTML5/CSS -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HTML -->
+
+
+
+{% endblock content %}

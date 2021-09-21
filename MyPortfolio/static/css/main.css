@@ -1,0 +1,126 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+  background-color: #313752;
+  font-family: "Roboto", sans-serif;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.brand {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.navbar {
+  font-family: "Roboto", sans-serif;
+}
+
+/* slightly transparent fallback */
+.bg-glass {
+  margin: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.bg-dark-gradient {
+  margin: 10px;
+  padding: 10px;
+  background: rgba(17, 25, 40, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 12px;
+}
+
+.bg-dark-gradient-2 {
+  margin: 10px;
+  padding: 10px;
+  background: rgba(17, 25, 40, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 12px;
+}
+
+/* if backdrop support: glassmorphism applies */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .bg-glass {
+    margin: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(156, 92, 92, 0.18);
+  }
+
+  .bg-dark-gradient {
+    margin: 10px;
+    padding: 10px;
+    backdrop-filter: blur(20px) saturate(187%);
+    -webkit-backdrop-filter: blur(20px) saturate(187%);
+    background-color: rgba(17, 25, 40, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 12px;
+  }
+
+  .bg-dark-gradient-2 {
+    margin: 10px;
+    padding: 10px;
+    backdrop-filter: blur(20px) saturate(187%);
+    -webkit-backdrop-filter: blur(20px) saturate(187%);
+    background: rgba(17, 25, 40, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 12px;
+  }
+}
+
+.home-title {
+  font-family: "Kaushan Script", cursive;
+  font-size: 5.5rem;
+  letter-spacing: 0.12em;
+}
+
+.home-subtitle {
+  font-family: "Concert One", cursive;
+}
+
+hr.style-seven {
+  overflow: visible; /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+hr.style-seven:before {
+  /* Not really supposed to work, but does */
+  display: block;
+  text-align: center;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: white;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}

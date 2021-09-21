@@ -1,0 +1,167 @@
+{% extends 'portfolio/main.html' %}
+{% load static %}
+{% block title %} Caio Gomes | Desarrollador Full-Stack {% endblock title %}
+
+{% block content %}
+
+
+<div class="container-fluid" style="max-width: 99%;">
+
+  <div class="row d-flex flex-column flex-xl-row">
+
+    <!-- Text -->
+
+    <div class="col d-flex align-items-center justify-content-center flex-column text-white mt-5 mt-xl-0">
+
+      <h1 class="home-title text-center">Hola Mundo</h1>
+      <h2 class="home-subtitle">Soy <span class="text-warning">Caio</span> <span class="text-danger">Gomes</span></h2>
+      <hr class="style-seven" style="width: 60%; color: white;">
+      <p>Desarrollador web Full-stack y programador</p>
+
+    </div>
+
+    <!-- Text -->
+
+    <!-- Image -->
+
+    <div class="col d-flex justify-content-center align-items-center">
+
+      <img class="img-fluid" src="{% static 'images/logo.png' %}" alt="Mi logo">
+
+    </div>
+
+    <!-- Image -->
+
+  </div>
+
+</div>
+
+<div class="container-fluid" style="max-width: 99%;">
+
+  <h1 class="text-center text-white mt-5" style="font-size: 3.6rem; letter-spacing: 3px;">Mis proyectos más
+    recientes
+  </h1>
+
+  <p class="text-muted text-center">Unos ejemplos de mis proyectos más recientes. Algunos aún están en desarrollo
+    activo.</p>
+
+  <hr class="style-seven mt-4">
+
+  <div class="card-group m-5">
+
+    <div class="card bg-dark">
+
+      <a href="{% url 'home' %}">
+
+        <img src="{% static 'images/portfolio.png' %}" class="card-img-top" alt="portfolio-website">
+
+      </a>
+
+      <div class="card-body text-white">
+
+        <h5 class="card-title">Mi portafolio</h5>
+
+        <p class="card-text">Esta página web ha sido creada con Django, un framework de Python y diseñada con HTML, CSS
+          y Bootstrap 5
+          para mi portafolio personal.</p>
+
+      </div>
+
+      <div class="card-footer">
+
+        <small class="text-muted">Finalizado: 23/09/2021</small>
+
+      </div>
+
+    </div>
+
+    <div class="card bg-dark">
+
+      <a href="{% url 'portfolio' %}">
+
+        <img src="{% static 'images/ecommerce-store.jpg' %}" class="card-img-top" alt="ecommerce-website">
+
+      </a>
+
+      <div class="card-body text-white">
+
+        <h5 class="card-title">Ecommerce</h5>
+        <p class="card-text">Estoy trabajando en un ecommerce que también desarrollaré con Django. Es un proyecto más
+          complejo que requiere una base de datos.</p>
+
+      </div>
+
+      <div class="card-footer">
+
+        <small class="text-muted">Lanzamiento: No hay fecha</small>
+
+      </div>
+
+    </div>
+
+    <div class="card bg-dark">
+
+      <a href="https://www.pivsistemes.com" target="_blank">
+
+        <img class="card-img-top" src="{% static 'images/piv.png' %}" alt="Desktop application">
+
+      </a>
+
+      <div class="card-body text-white">
+
+        <h5 class="card-title">Aplicación de escritorio</h5>
+        <p class="card-text">Desarrollé una aplicación de escritorio durante mi periodo de prácticas en <a
+            href="https://www.pivsistemes.com" target="_blank">Grup PIV de Sistemes</a> con una base de datos MySQL y
+          PyQT5 para la interfaz gráfica. </p>
+
+      </div>
+
+      <div class="card-footer">
+
+        <small class="text-muted">Finalizado: 31/07/2021</small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center">
+
+    <a class="btn btn-outline-primary" href="{% url 'portfolio' %}">Ver portafolio completo</a>
+
+  </div>
+
+  <hr class="style-seven mt-5 mb-5">
+
+  <div class="d-flex justify-content-center align-items-center flex-column text-white bg-dark-gradient-2"
+    style="font-family: 'Catamaran', sans-serif;">
+
+    <div class="ms-0 mt-4 ms-md-4 me-auto">
+
+      <h1 style="font-size: 3rem; color: #D31152;">"</h1>
+
+    </div>
+
+    <div class="container blockquote">
+
+      <h1 style="font-size: 2rem;">La mayoría de los buenos programadores lo son no porque esperen que se les pague o
+        por la adulación del público, sino porque les divierte programar</h1>
+
+      <figcaption class="blockquote-footer text-end">Linus Torvalds</figcaption>
+
+    </div>
+
+    <div class="me-0 me-md-4 ms-auto">
+
+      <h1 style="font-size: 3rem; color: #D31152;">"</h1>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
+{% endblock content %}
